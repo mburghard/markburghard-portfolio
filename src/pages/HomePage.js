@@ -50,7 +50,7 @@ const HomePage = () => {
         aboutRef={aboutRef}
         aboutInView={aboutInView}
         aboutMeText={aboutMeText}
-        aboutSectionRef={aboutSectionRef} // Pass this as a prop
+        aboutSectionRef={aboutSectionRef}
       />
       <SkillsCarousel />
       <SkillsSection skillsRef={skillsRef} skillsInView={skillsInView} />

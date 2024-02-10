@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../fonts/AvenirNextLTPro Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../fonts/AvenirNextLTPro-It.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../fonts/AvenirNextLTPro-DemiIt.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "AvenirNextLTPro";
+}
+
+.page-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-image: url("../assets/intro-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+.copyright {
+  position: absolute;
+  color: gray;
+  top: 10%;
+  left: 10%;
+  text-transform: uppercase;
+  font-size: medium;
+  font-family: "AvenirNextLTPro";
+}

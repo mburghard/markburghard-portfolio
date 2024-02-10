@@ -1,0 +1,161 @@
+.product-description-container {
+  flex: 2;
+  padding-left: 3%;
+  padding-right: 10%;
+  height: 50vh;
+  z-index: 1;
+}
+
+.product-description {
+  padding-top: 20px;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+}
+
+.product-logo {
+  height: 8vh;
+  width: auto;
+  position: relative;
+  left: -40px;
+}
+
+.feature-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-right: 2%;
+}
+
+.feature-icon {
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.feature-icon img {
+  height: 30px;
+  width: auto;
+}
+
+.icon-description {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: fit-content;
+}
+
+.feature-icon:hover .icon-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-description {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: x-small;
+  padding: 4px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+.icon-desc-text {
+  font-weight: bold;
+  margin-bottom: 1;
+}
+
+.icon-detail-text {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.feature-icon:hover .icon-description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tags-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.tag {
+  background-color: white;
+  color: black;
+  height: fit-content;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  font-size: small;
+  text-transform: uppercase;
+}
+
+.product-description-long {
+  text-align: left;
+  font-size: small;
+  max-width: auto;
+  margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 3%;
+  color: white;
+  font-size: medium;
+}
+
+.product-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 80px;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  font-family: "AvenirNextLTPro";
+}
+
+.text-button .arrow {
+  position: relative;
+  left: 3px;
+  margin-left: 5px;
+  transition: left 0.3s ease;
+  color: red;
+}
+
+.button-slash {
+  margin: -10px 10px;
+  height: 50px;
+}
+
+.text-button:hover .arrow {
+  left: 8px;
+}

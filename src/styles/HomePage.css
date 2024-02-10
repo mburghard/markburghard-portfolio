@@ -1,7 +1,5 @@
-/* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Mono:ital,wght@0,400;1,600&display=swap");
 
-/* Reset styles */
 html,
 body {
   margin: 0;
@@ -10,7 +8,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* Headers */
 h1,
 h2,
 h3,
@@ -20,7 +17,6 @@ h6 {
   font-family: "Roboto Mono", monospace;
 }
 
-/* Main container styles */
 .main-container,
 .container-master,
 .container.my-5 {
@@ -32,7 +28,6 @@ h6 {
   padding: 1rem;
 }
 
-/* Common sections */
 .home-container,
 .hero-section,
 .about-section {
@@ -40,7 +35,6 @@ h6 {
   margin: 50px 0;
 }
 
-/* Header styles */
 .full-page-header {
   position: relative;
   height: 100vh;
@@ -65,7 +59,6 @@ h6 {
   z-index: 1;
 }
 
-/* Carousel styles */
 .carousel-inner {
   padding-top: 15px;
   padding-left: 1rem;
@@ -111,7 +104,6 @@ h6 {
   filter: invert(100%);
 }
 
-/* Button styles */
 .cta-button {
   margin-top: 10px;
   padding: 10px 20px;
@@ -129,7 +121,6 @@ h6 {
   background-color: #0056b3;
 }
 
-/* About me section */
 .about-me-section {
   display: flex;
   align-items: center;
@@ -157,14 +148,12 @@ h6 {
   object-fit: cover;
 }
 
-/* Form styles */
 .form-group .form-control {
   background-color: transparent;
   color: white;
   margin: 5px 0;
 }
 
-/* Video background */
 .video-background {
   position: absolute;
   top: 0;
@@ -175,7 +164,6 @@ h6 {
   z-index: 0;
 }
 
-/* Keyframes for animations */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
