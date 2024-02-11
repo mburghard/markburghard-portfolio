@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/markburghard-react-site/static/css/main.34ad1b63.css",
-    "main.js": "/markburghard-react-site/static/js/main.5af3553b.js",
+    "main.js": "/markburghard-react-site/static/js/main.985d3a80.js",
     "static/js/592.f3a05e54.chunk.js": "/markburghard-react-site/static/js/592.f3a05e54.chunk.js",
     "static/media/background-video-1.mp4": "/markburghard-react-site/static/media/background-video-1.c0ad155604ed86cb7360.mp4",
     "static/media/action-vid.mp4": "/markburghard-react-site/static/media/action-vid.9e69246cd5d748c1086f.mp4",
@@ -34,11 +34,11 @@
     "static/media/clock.png": "/markburghard-react-site/static/media/clock.d3170cf7795f72974de8.png",
     "index.html": "/markburghard-react-site/index.html",
     "main.34ad1b63.css.map": "/markburghard-react-site/static/css/main.34ad1b63.css.map",
-    "main.5af3553b.js.map": "/markburghard-react-site/static/js/main.5af3553b.js.map",
+    "main.985d3a80.js.map": "/markburghard-react-site/static/js/main.985d3a80.js.map",
     "592.f3a05e54.chunk.js.map": "/markburghard-react-site/static/js/592.f3a05e54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34ad1b63.css",
-    "static/js/main.5af3553b.js"
+    "static/js/main.985d3a80.js"
   ]
 }
