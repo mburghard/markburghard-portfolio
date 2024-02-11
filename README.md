@@ -10,4 +10,4 @@ Thanks for taking the time to look through this, talk soon!
 
 ## Live Site
 
-Check out the demo here: [Mark Burghard React Portfolio Site](https://username.github.io/markburghard-react-site/#/product-showcase)
+Check out the demo here: [Mark Burghard React Portfolio Site](https://mburghard.github.io/markburghard-react-site/#/product-showcase)
