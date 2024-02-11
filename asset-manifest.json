@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/markburghard-react-site/static/css/main.34ad1b63.css",
-    "main.js": "/markburghard-react-site/static/js/main.ae832443.js",
+    "main.js": "/markburghard-react-site/static/js/main.5af3553b.js",
     "static/js/592.f3a05e54.chunk.js": "/markburghard-react-site/static/js/592.f3a05e54.chunk.js",
     "static/media/background-video-1.mp4": "/markburghard-react-site/static/media/background-video-1.c0ad155604ed86cb7360.mp4",
     "static/media/action-vid.mp4": "/markburghard-react-site/static/media/action-vid.9e69246cd5d748c1086f.mp4",
     "static/media/profile_pic.jpg": "/markburghard-react-site/static/media/profile_pic.9a479052f8e73675dd6b.jpg",
-    "static/media/tire-top.png": "/markburghard-react-site/static/media/tire-top.f3cb58a377ee9ab8ac58.png",
+    "static/media/tire-top-view.png": "/markburghard-react-site/static/media/tire-top-view.7a7b0d093d655007afd9.png",
     "static/media/tire-iso-1.png": "/markburghard-react-site/static/media/tire-iso-1.5cab8a2b8d4f838620bc.png",
     "static/media/tire-iso-2.png": "/markburghard-react-site/static/media/tire-iso-2.7d9bcc93aa55ea7bd72b.png",
     "static/media/tire-yellow.png": "/markburghard-react-site/static/media/tire-yellow.eef9277b310b448ba86e.png",
@@ -34,11 +34,11 @@
     "static/media/clock.png": "/markburghard-react-site/static/media/clock.d3170cf7795f72974de8.png",
     "index.html": "/markburghard-react-site/index.html",
     "main.34ad1b63.css.map": "/markburghard-react-site/static/css/main.34ad1b63.css.map",
-    "main.ae832443.js.map": "/markburghard-react-site/static/js/main.ae832443.js.map",
+    "main.5af3553b.js.map": "/markburghard-react-site/static/js/main.5af3553b.js.map",
     "592.f3a05e54.chunk.js.map": "/markburghard-react-site/static/js/592.f3a05e54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34ad1b63.css",
-    "static/js/main.ae832443.js"
+    "static/js/main.5af3553b.js"
   ]
 }
