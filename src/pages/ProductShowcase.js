@@ -46,7 +46,6 @@ const ProductShowcasePage = () => {
   const sectionFourRef = useRef(null);
 
   const [progress, setProgress] = useState(0);
-  const [activeSection, setActiveSectionIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [sidebarIndex, setSidebarIndex] = useState(null);
@@ -83,6 +82,7 @@ const ProductShowcasePage = () => {
 
   useEffect(() => {
     const scrollNextSection = () => {
+      console.log("NEXT");
       const currentSection = determineCurrentSection();
       const nextSection = getNextSection(currentSection);
       setSidebarIndex(nextSection);
@@ -90,6 +90,7 @@ const ProductShowcasePage = () => {
     };
 
     const scrollPreviousSection = () => {
+      console.log("PREV");
       const currentSection = determineCurrentSection();
       const prevSection = getPreviousSection(currentSection);
       setSidebarIndex(prevSection);
@@ -108,7 +109,6 @@ const ProductShowcasePage = () => {
         }
       }
       console.log(currentSectionIndex);
-      setActiveSectionIndex(currentSectionIndex);
       return currentSectionIndex;
     };
 
@@ -121,7 +121,23 @@ const ProductShowcasePage = () => {
     };
 
     let accumulatedDeltaY = 0;
-    const threshold = 150;
+    const threshold = 5;
+
+    const throttle = (func, limit) => {
+      let inThrottle;
+      return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => (inThrottle = false), limit);
+        }
+      };
+    };
+
+    const throttledScrollNext = throttle(scrollNextSection, 1000);
+    const throttledScrollPrev = throttle(scrollPreviousSection, 1000);
 
     const handleScroll = (event) => {
       event.preventDefault();
@@ -129,12 +145,12 @@ const ProductShowcasePage = () => {
       accumulatedDeltaY += event.deltaY;
 
       if (Math.abs(accumulatedDeltaY) >= threshold) {
-        if (accumulatedDeltaY > 0) {
-          scrollNextSection();
-        } else {
-          scrollPreviousSection();
-        }
         accumulatedDeltaY = 0;
+        if (event.deltaY > 0) {
+          throttledScrollNext();
+        } else {
+          throttledScrollPrev();
+        }
       }
     };
 
@@ -142,13 +158,7 @@ const ProductShowcasePage = () => {
     let initialIndex = determineCurrentSection();
     setSidebarIndex(initialIndex);
     return () => window.removeEventListener("wheel", handleScroll);
-  }, [
-    sectionOneRef,
-    sectionTwoRef,
-    sectionThreeRef,
-    sectionFourRef,
-    setActiveSectionIndex,
-  ]);
+  }, [sectionOneRef, sectionTwoRef, sectionThreeRef, sectionFourRef]);
 
   return (
     <div>

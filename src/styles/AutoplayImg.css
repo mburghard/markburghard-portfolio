@@ -111,7 +111,7 @@
   border: none;
   background: none;
   margin-bottom: 40px;
-  max-width: 15vw;
+  max-width: 16vw;
   text-align: left;
   cursor: pointer;
 }
@@ -126,7 +126,7 @@
 }
 
 .feature-buttons h3 {
-  font-size: x-large;
+  font-size: 3vh;
   font-weight: bold;
   color: gray;
   font-family: "AvenirNextLTPro";
@@ -136,7 +136,7 @@
   margin: 0;
   color: gray;
   font-family: "AvenirNextLTPro";
-  font-size: medium;
+  font-size: small;
 }
 
 .feature-buttons .button-progress-bar {
