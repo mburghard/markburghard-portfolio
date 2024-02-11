@@ -7,7 +7,7 @@ import AutoplayImage from "../components/AutoplayImg";
 import tire1 from "../assets/tire-iso-1.png";
 import tire2 from "../assets/tire-front.png";
 import tire3 from "../assets/tire-iso-2.png";
-import tire4 from "../assets/tire-top.png";
+import tire4 from "../assets/tire-top-view.png";
 import slashImg from "../assets/slash.png";
 import tireRed from "../assets/tire-red.png";
 import tireStripe from "../assets/tire-stripe.png";
