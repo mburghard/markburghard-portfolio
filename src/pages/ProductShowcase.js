@@ -228,11 +228,11 @@ const ProductShowcasePage = () => {
           ))}
         </div>
         <AutoplayImage
-          images={[tireRed, tireStripe, tire3, tireYellow]}
+          images={[tireRed, tireYellow, tire3, tireStripe]}
           currentImageIndex={currentImageIndex}
           setCurrentImageIndex={setCurrentImageIndex}
           isPlaying={isPlaying}
-          interval={10000}
+          interval={7500}
           onProgressChange={handleProgressChange}
         />
       </div>

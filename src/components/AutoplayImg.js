@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/AutoplayImg.css";
+import "../styles/FeaturePopouts.css";
+import siteData from "../assets/site-data";
 
 const AutoplayImage = ({
   images,
@@ -11,9 +13,75 @@ const AutoplayImage = ({
   const [isPlaying, setIsPlaying] = useState(true);
   const [isFading, setIsFading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const fadeDuration = 800;
+  const fadeDuration = 600;
   const circleRadius = 33;
   const circleCircumference = 2 * Math.PI * circleRadius;
+
+  const imageInfo = siteData.imageInfo;
+
+  const [shouldSpawn, setShouldSpawn] = useState(false);
+
+  const renderFeaturePopouts = () => {
+    const currentImageKey = `image${currentImageIndex + 1}`;
+    const currentImageCoordinates = imageInfo[currentImageKey];
+
+    return (
+      <div className="feature-popouts-container">
+        {currentImageCoordinates &&
+          currentImageCoordinates.map((info, index) => (
+            <React.Fragment key={index}>
+              <div
+                className={`popout-dot ${shouldSpawn ? "spawn-in" : ""}`}
+                style={{ left: `${info.x}%`, top: `${info.y}%` }}
+              ></div>
+              <div
+                className="line-container"
+                style={{ left: `${info.x}%`, top: `${info.y}%` }}
+              >
+                <div
+                  className={`diagonal-line ${
+                    shouldSpawn ? "grow-diagonal" : ""
+                  }`}
+                ></div>
+                <div
+                  className={`horizontal-line ${
+                    shouldSpawn ? "grow-horizontal" : ""
+                  }`}
+                ></div>
+              </div>
+
+              <div
+                className={`popout-detail ${
+                  shouldSpawn ? "fade-in-detail" : ""
+                }`}
+                style={{ left: `${info.x}%`, top: `${info.y + -2}%` }}
+              >
+                <div>
+                  <h3>{info.feature}</h3>
+                  <p>{info.detail}</p>
+                </div>
+              </div>
+            </React.Fragment>
+          ))}
+      </div>
+    );
+  };
+
+  useEffect(() => {
+    if (isFading) {
+      setShouldSpawn(false);
+    } else {
+      const spawnTimer = setTimeout(() => {
+        setShouldSpawn(true);
+      }, 100);
+
+      return () => clearTimeout(spawnTimer);
+    }
+  }, [isFading, currentImageIndex]);
+
+  useEffect(() => {
+    setShouldSpawn(false);
+  }, [currentImageIndex]);
 
   useEffect(() => {
     let progressTimer;
@@ -74,6 +142,7 @@ const AutoplayImage = ({
             }}
           />
         ))}
+        {renderFeaturePopouts()}
       </div>
       <div className="play-pause-container">
         <svg className="progress-ring">

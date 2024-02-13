@@ -1,0 +1,125 @@
+.feature-popouts-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.popout-dot {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+}
+
+.popout-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.spawn-in {
+  animation: spawnDot 0.3s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes spawnDot {
+  to {
+    transform: scale(1);
+  }
+}
+
+.line-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.grow-diagonal {
+  position: absolute;
+  left: 10px;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  animation: growDiagonal 0.2s ease forwards;
+  animation-delay: 1.3s;
+}
+
+.grow-horizontal {
+  position: absolute;
+  left: 59px;
+  bottom: 39px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transform-origin: left bottom;
+  animation: growHorizontal 0.2s ease forwards;
+  animation-delay: 1.45s;
+}
+
+@keyframes growDiagonal {
+  to {
+    width: 70px;
+  }
+}
+
+@keyframes growHorizontal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35vw;
+  }
+}
+
+.popout-detail {
+  opacity: 0;
+}
+
+.fade-in-detail {
+  position: absolute;
+  transform: translate3d(20vw, -6.5vh, 0px);
+  width: 20vw;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: fadeInDetail 0.5s ease forwards;
+  animation-delay: 0.8s;
+  overflow: visible;
+  z-index: 1;
+}
+
+.fade-in-detail h3 {
+  font-size: xx-large;
+  color: red;
+  font-family: "AvenirNextLTPro";
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.fade-in-detail p {
+  color: white;
+  margin-top: 15px;
+  font-family: "AvenirNextLTPro";
+  text-align: left;
+  font-size: x-large;
+}
+
+@keyframes fadeInDetail {
+  to {
+    opacity: 1;
+  }
+}

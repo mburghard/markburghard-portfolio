@@ -22,7 +22,7 @@
   width: 70%;
   height: 53vh;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .product-image {
@@ -98,12 +98,13 @@
 }
 .feature-buttons {
   position: absolute;
-  left: 7%;
+  left: 10%;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   font-size: small;
+  max-height: 100vh;
 }
 
 .feature-buttons button {
@@ -112,6 +113,7 @@
   background: none;
   margin-bottom: 40px;
   max-width: 16vw;
+  max-height: 18vh;
   text-align: left;
   cursor: pointer;
 }
@@ -126,7 +128,7 @@
 }
 
 .feature-buttons h3 {
-  font-size: 3vh;
+  font-size: 1.6vw;
   font-weight: bold;
   color: gray;
   font-family: "AvenirNextLTPro";
@@ -136,7 +138,7 @@
   margin: 0;
   color: gray;
   font-family: "AvenirNextLTPro";
-  font-size: small;
+  font-size: 1vw;
 }
 
 .feature-buttons .button-progress-bar {
@@ -158,7 +160,7 @@
 }
 
 .feature-heading {
-  font-size: xx-large;
+  font-size: 1.8vw;
   text-align: left;
   margin-bottom: 50px;
   font-weight: bold;

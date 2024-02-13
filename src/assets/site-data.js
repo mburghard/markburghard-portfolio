@@ -3,8 +3,7 @@ import fistIcon from "./fist.png";
 import helmetIcon from "./helmet.png";
 import sunIcon from "./sun.png";
 import clockIcon from "./clock.png";
-import tirelogo from "./tire-logo.png";
-import actionVid from "./action-vid.mp4";
+import tirelogo from "./tire-logo-1.png";
 
 const siteData = {
   features: [
@@ -87,6 +86,59 @@ const siteData = {
 
   productDescriptionLong:
     "When you absolutely have to finish first, the competition-silencing \n ADVAN A052® is your one-way ticket to the podium. This race-ready,\n extreme performance summer tire delivers physics-defying levels of\ngrip, making a statement on the street and a standout on the track.",
+
+  imageInfo: {
+    image1: [
+      {
+        x: 50,
+        y: 9,
+        feature: "High Stability Compound Rib",
+        detail:
+          "Extra wide outer rib delivers powerful, uninterrupted cornering capability.",
+      },
+      {
+        x: 66,
+        y: 43,
+        feature: "Motorsports Construction",
+        detail:
+          "Produced on the same production line as our ADVAN competition tires.",
+      },
+    ],
+    image2: [
+      {
+        x: 60,
+        y: 15,
+        feature: "New MS Compound",
+        detail:
+          "Combines the extreme grip of motorsports technology with BluEarth™ fuel efficiency.",
+      },
+      {
+        x: 65,
+        y: 44,
+        feature: "Rounded Rib Profile",
+        detail:
+          "Provides a more cohesive contact patch to minimize heat buildup during aggressive driving.",
+      },
+    ],
+    image3: [
+      {
+        x: 64,
+        y: 43,
+        feature: "New MS Compound",
+        detail:
+          "Competitive in all conditions from Pikes Peak International Hill Climb to One Lap of America to the local amateur autocross.",
+      },
+    ],
+    image4: [
+      {
+        x: 58,
+        y: 43,
+        feature: "Notched Micro Grooves",
+        detail:
+          "Dissipate heat to keep tires temperatures at the optimum level across the entire section width.",
+      },
+    ],
+  },
 };
 
 export default siteData;
