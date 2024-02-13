@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/markburghard-react-site/static/css/main.34ad1b63.css",
-    "main.js": "/markburghard-react-site/static/js/main.985d3a80.js",
+    "main.css": "/markburghard-react-site/static/css/main.6c4e19bd.css",
+    "main.js": "/markburghard-react-site/static/js/main.616c6e78.js",
     "static/js/592.f3a05e54.chunk.js": "/markburghard-react-site/static/js/592.f3a05e54.chunk.js",
     "static/media/background-video-1.mp4": "/markburghard-react-site/static/media/background-video-1.c0ad155604ed86cb7360.mp4",
     "static/media/action-vid.mp4": "/markburghard-react-site/static/media/action-vid.9e69246cd5d748c1086f.mp4",
@@ -22,7 +22,6 @@
     "static/media/AvenirNextLTPro-Demi.otf": "/markburghard-react-site/static/media/AvenirNextLTPro-Demi.2a0cec709a4166a967dc.otf",
     "static/media/AvenirNextLTPro-Regular.otf": "/markburghard-react-site/static/media/AvenirNextLTPro-Regular.94f2f163d4b698242fef.otf",
     "static/media/AvenirNextLTPro-It.otf": "/markburghard-react-site/static/media/AvenirNextLTPro-It.3e062c6caf04ecafa42c.otf",
-    "static/media/tire-logo.png": "/markburghard-react-site/static/media/tire-logo.db980b56833967617c42.png",
     "static/media/continuous.png": "/markburghard-react-site/static/media/continuous.47de415ce427587c0744.png",
     "static/media/requirement.png": "/markburghard-react-site/static/media/requirement.cd370f7eb6170b7b4f3b.png",
     "static/media/cloud-data.png": "/markburghard-react-site/static/media/cloud-data.2ccfb370857b6c14aa17.png",
@@ -31,14 +30,15 @@
     "static/media/back-end.png": "/markburghard-react-site/static/media/back-end.e1c11515a15324b4c3a7.png",
     "static/media/sun.png": "/markburghard-react-site/static/media/sun.21add64a01789be668ca.png",
     "static/media/helmet.png": "/markburghard-react-site/static/media/helmet.3f314c3ef3e839690a87.png",
+    "static/media/tire-logo-1.png": "/markburghard-react-site/static/media/tire-logo-1.6af5ab15a9d115e8bd2d.png",
     "static/media/clock.png": "/markburghard-react-site/static/media/clock.d3170cf7795f72974de8.png",
     "index.html": "/markburghard-react-site/index.html",
-    "main.34ad1b63.css.map": "/markburghard-react-site/static/css/main.34ad1b63.css.map",
-    "main.985d3a80.js.map": "/markburghard-react-site/static/js/main.985d3a80.js.map",
+    "main.6c4e19bd.css.map": "/markburghard-react-site/static/css/main.6c4e19bd.css.map",
+    "main.616c6e78.js.map": "/markburghard-react-site/static/js/main.616c6e78.js.map",
     "592.f3a05e54.chunk.js.map": "/markburghard-react-site/static/js/592.f3a05e54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34ad1b63.css",
-    "static/js/main.985d3a80.js"
+    "static/css/main.6c4e19bd.css",
+    "static/js/main.616c6e78.js"
   ]
 }
