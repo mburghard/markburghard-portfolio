@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Carousel from "../components/ProductCarousel";
 import ProductDescription from "../components/ProductDescription";
 import Sidebar from "../components/Sidebar";
@@ -19,6 +19,8 @@ import siteData from "../assets/site-data";
 import "../styles/ProductShowcase.css";
 import "../styles/Specs.css";
 import "../styles/VideoContainer.css";
+
+import useScrollNavigation from "../hooks/useScrollNavigation";
 
 const {
   features,
@@ -48,21 +50,16 @@ const ProductShowcasePage = () => {
   const [progress, setProgress] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [sidebarIndex, setSidebarIndex] = useState(null);
 
   const handleProgressChange = (newProgress) => {
     setProgress(newProgress);
-  };
-
-  const handleSectionClick = (sectionIndex) => {
-    scrollToSection(sectionIndex);
-    setSidebarIndex(sectionIndex);
   };
 
   const changeImageAndPause = (index) => {
     setCurrentImageIndex(index);
     setIsPlaying(false);
   };
+
   const sectionRefs = [
     sectionOneRef,
     sectionTwoRef,
@@ -70,95 +67,11 @@ const ProductShowcasePage = () => {
     sectionFourRef,
   ];
 
-  const scrollToSection = (sectionIndex) => {
-    const sectionRef = sectionRefs[sectionIndex];
-    if (sectionRef && sectionRef.current) {
-      window.scrollTo({
-        top: sectionRef.current.offsetTop,
-        behavior: "smooth",
-      });
-    }
+  const handleSectionClick = (sectionIndex) => {
+    scrollToSection(sectionIndex);
   };
 
-  useEffect(() => {
-    const scrollNextSection = () => {
-      console.log("NEXT");
-      const currentSection = determineCurrentSection();
-      const nextSection = getNextSection(currentSection);
-      setSidebarIndex(nextSection);
-      scrollToSection(nextSection);
-    };
-
-    const scrollPreviousSection = () => {
-      console.log("PREV");
-      const currentSection = determineCurrentSection();
-      const prevSection = getPreviousSection(currentSection);
-      setSidebarIndex(prevSection);
-      scrollToSection(prevSection);
-    };
-
-    const determineCurrentSection = () => {
-      const currentScrollPos = window.scrollY + window.innerHeight / 2;
-      let currentSectionIndex = 0;
-
-      for (let i = 0; i < sectionRefs.length; i++) {
-        if (currentScrollPos >= sectionRefs[i].current.offsetTop) {
-          currentSectionIndex = i;
-        } else {
-          break;
-        }
-      }
-      console.log(currentSectionIndex);
-      return currentSectionIndex;
-    };
-
-    const getNextSection = (currentIndex) => {
-      return (currentIndex + 1) % sectionRefs.length;
-    };
-
-    const getPreviousSection = (currentIndex) => {
-      return (currentIndex - 1 + sectionRefs.length) % sectionRefs.length;
-    };
-
-    let accumulatedDeltaY = 0;
-    const threshold = 5;
-
-    const throttle = (func, limit) => {
-      let inThrottle;
-      return function () {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-          func.apply(context, args);
-          inThrottle = true;
-          setTimeout(() => (inThrottle = false), limit);
-        }
-      };
-    };
-
-    const throttledScrollNext = throttle(scrollNextSection, 1000);
-    const throttledScrollPrev = throttle(scrollPreviousSection, 1000);
-
-    const handleScroll = (event) => {
-      event.preventDefault();
-
-      accumulatedDeltaY += event.deltaY;
-
-      if (Math.abs(accumulatedDeltaY) >= threshold) {
-        accumulatedDeltaY = 0;
-        if (event.deltaY > 0) {
-          throttledScrollNext();
-        } else {
-          throttledScrollPrev();
-        }
-      }
-    };
-
-    window.addEventListener("wheel", handleScroll, { passive: false });
-    let initialIndex = determineCurrentSection();
-    setSidebarIndex(initialIndex);
-    return () => window.removeEventListener("wheel", handleScroll);
-  }, [sectionOneRef, sectionTwoRef, sectionThreeRef, sectionFourRef]);
+  const { sidebarIndex, scrollToSection } = useScrollNavigation(sectionRefs);
 
   return (
     <div>

@@ -90,7 +90,7 @@
 
 .fade-in-detail {
   position: absolute;
-  transform: translate3d(20vw, -6.5vh, 0px);
+  transform: translate3d(20vw, -11vh, 0px);
   width: 20vw;
   padding: 10px;
   opacity: 0;
@@ -102,7 +102,7 @@
 }
 
 .fade-in-detail h3 {
-  font-size: xx-large;
+  font-size: 2vw;
   color: red;
   font-family: "AvenirNextLTPro";
   text-transform: uppercase;
@@ -115,7 +115,7 @@
   margin-top: 15px;
   font-family: "AvenirNextLTPro";
   text-align: left;
-  font-size: x-large;
+  font-size: 1vw;
 }
 
 @keyframes fadeInDetail {
