@@ -1,8 +1,8 @@
 import React from "react";
 import HomePage from "./pages/HomePage";
-import HomePageNew from "./pages/HomePageNew";
+//import HomePageNew from "./pages/HomePageNew";
 import ProductShowcasePage from "./pages/ProductShowcase";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
