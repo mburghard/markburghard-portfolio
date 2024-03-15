@@ -78,3 +78,24 @@ body {
   font-size: medium;
   font-family: "AvenirNextLTPro";
 }
+
+.back-to-home-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: lightgray; /* Example background color */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from link */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+.back-to-home-btn:hover {
+  color: red; /* Example hover color */
+}

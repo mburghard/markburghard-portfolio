@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 import "../styles/HomePage.css";
 import { useEffect } from "react";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import SkillsCarousel from "../components/Carousel";
 import HeaderSection from "../components/HeaderSection";

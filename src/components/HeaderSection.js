@@ -1,12 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import videoBackground from "../assets/background-video-1.mp4";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const HeaderSection = ({ scrollToAbout }) => {
   const navigate = useNavigate();
 
   const navigateToProductShowcase = () => {
     navigate("/product-showcase");
+  };
+  const navigateToGithub = () => {
+    window.open(
+      "https://github.com/mburghard/markburghard-portfolio",
+      "_blank"
+    );
   };
 
   return (
@@ -18,11 +26,14 @@ const HeaderSection = ({ scrollToAbout }) => {
       <p className="header-subtitle">
         Driving Progress with Precision and Creativity
       </p>
+      <button className="cta-button" onClick={navigateToProductShowcase}>
+        Front End Product Showcase Demo
+      </button>
       <button className="cta-button" onClick={scrollToAbout}>
         See what I can do for you
       </button>
-      <button className="cta-button" onClick={navigateToProductShowcase}>
-        YTC Product Showcase
+      <button className="cta-button" onClick={navigateToGithub}>
+        <FontAwesomeIcon icon={faGithub} /> Github Portfolio
       </button>
     </div>
   );

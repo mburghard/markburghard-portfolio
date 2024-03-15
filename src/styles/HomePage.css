@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-container,
@@ -25,7 +25,8 @@ h6 {
   width: 100%;
   max-width: none;
   margin: 0 auto;
-  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .home-container,
@@ -171,4 +172,9 @@ h6 {
   to {
     transform: rotate(360deg);
   }
+}
+
+.contact-section {
+  flex: auto;
+  flex-direction: row;
 }

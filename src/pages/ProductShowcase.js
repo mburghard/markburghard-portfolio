@@ -19,6 +19,7 @@ import siteData from "../assets/site-data";
 import "../styles/ProductShowcase.css";
 import "../styles/Specs.css";
 import "../styles/VideoContainer.css";
+import HomeButton from "../components/HomeButton";
 
 import useScrollNavigation from "../hooks/useScrollNavigation";
 
@@ -68,14 +69,17 @@ const ProductShowcasePage = () => {
   ];
 
   const handleSectionClick = (sectionIndex) => {
+    setSidebarIndex(sectionIndex);
     scrollToSection(sectionIndex);
   };
 
-  const { sidebarIndex, scrollToSection } = useScrollNavigation(sectionRefs);
+  const { sidebarIndex, scrollToSection, setSidebarIndex } =
+    useScrollNavigation(sectionRefs);
 
   return (
     <div>
       <div className="page-container" ref={sectionOneRef}>
+        <HomeButton />
         <Sidebar
           sections={sections}
           activeSection={sidebarIndex}

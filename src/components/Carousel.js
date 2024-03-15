@@ -9,7 +9,7 @@ const SkillsCarousel = () => {
   return (
     <div id="skillsCarousel" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
-        <h2>Development Skills</h2>
+        <h2 style={{ textAlign: "center" }}>Development Skills</h2>
         <div className="carousel-item active">
           <img
             src={cloudIcon}
