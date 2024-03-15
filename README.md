@@ -8,4 +8,4 @@ The code has been engineered to highlight a single responsibility principle desi
 
 ## Live Site
 
-Check out the live interactive site here: [Mark Burghard React Portfolio Site](https://mburghard.github.io/markburghard-react-site/)
+Check out the live interactive site here: [Mark Burghard React Portfolio Site](https://mburghard.github.io/markburghard-portfolio/)
